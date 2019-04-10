@@ -6,17 +6,12 @@ import javax.imageio.*;
 import javax.swing.*;
 import java.util.Scanner;
 
-/**
- *
- * @author Shane
- */
 public class main {
 
     /**
-     * @param args the command line arguments
+     * @param args the file that you want to have edited
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         BufferedImage img = null;
 
         try {
@@ -28,7 +23,14 @@ public class main {
 
     }
 
-    public static BufferedImage produceImage(BufferedImage img) {
+    /*
+        produceImage prompts the user how they want to edit the 
+        imagea and produces an image. The image is named output.jpg
+        and it is located in an output folder. A window will also
+        open with the newly created image displayed. When the window
+        is closed, the program ends.
+    */
+    public static void produceImage(BufferedImage img) {
         int width = 0;
         int height = 0;
         Scanner user = new Scanner(System.in);
@@ -65,9 +67,12 @@ public class main {
                 System.out.println("Invalid choice.");
                 System.out.println("Image has not been changed.");
         }
+        File dir = new File("Output");
+        dir.mkdir();
+        
         try {
             BufferedImage output = img;
-            File outputfile = new File("output.jpg");
+            File outputfile = new File("Output\\output.jpg");
             ImageIO.write(output, "jpg", outputfile);
         } catch (IOException e) {
             System.out.println("Could not output files!");
@@ -82,7 +87,6 @@ public class main {
         display.setSize(width, height);
         display.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         display.setVisible(true);
-        return img;
     }
 
 }
