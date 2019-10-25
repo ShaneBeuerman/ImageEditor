@@ -3,10 +3,6 @@ package imageeditor;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-/**
- *
- * @author Shane
- */
 public class Editors {
     
     /*
@@ -71,7 +67,8 @@ public class Editors {
                 input.setRGB(i, j, new Color(r, g, b).getRGB());
             }
         }
-        return input;    }
+        return input;    
+    }
     
     /*
         makeRed() sets the red value of a BufferedImage
@@ -130,7 +127,8 @@ public class Editors {
                 input.setRGB(i, j, new Color(r, g, b).getRGB());
             }
         }
-        return input;    }
+        return input;
+    }
     
     /*
         makeMagenta() sets the red and blue values
@@ -151,4 +149,5 @@ public class Editors {
         }
         return input;
     }
+    
 }

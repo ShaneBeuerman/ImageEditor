@@ -10,6 +10,11 @@ public class main {
 
     /**
      * @param args the file that you want to have edited
+     * The first argument given is the image file that is
+     * going to be edited. If it is not given, then the
+     * text "No argument found." will be displayed. If
+     * the argument can't be read as an image, then the
+     * text "No image" will be displayed.
      */
     public static void main(String[] args) {
         BufferedImage img = null;
