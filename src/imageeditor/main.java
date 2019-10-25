@@ -13,12 +13,15 @@ public class main {
      */
     public static void main(String[] args) {
         BufferedImage img = null;
-
-        try {
-            img = ImageIO.read(new File(args[0]));
-            produceImage(img);
-        } catch (IOException e) {
-            System.out.println("No image");
+        if(args.length == 0){
+            System.out.println("No argument found.");
+        }else{
+            try {
+                img = ImageIO.read(new File(args[0]));
+                produceImage(img);
+            } catch (IOException e) {
+                System.out.println("No image");
+            }
         }
 
     }
