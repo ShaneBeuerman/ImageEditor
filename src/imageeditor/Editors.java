@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 public class Editors {
     
     /*
-        inverter() inverts all teh colors of a BufferedImage.
+        inverter() inverts all the colors of a BufferedImage.
         It does so by subtracting 255 by the actual red, green,
         and blue values in the image and returning the
         BufferedImage with those new values.

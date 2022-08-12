@@ -17,7 +17,7 @@ public class main {
      * text "No image" will be displayed.
      */
     public static void main(String[] args) {
-        BufferedImage img = null;
+        BufferedImage img;
         if(args.length == 0){
             System.out.println("No argument found.");
         }else{
@@ -39,8 +39,8 @@ public class main {
         is closed, the program ends.
     */
     public static void produceImage(BufferedImage img) {
-        int width = 0;
-        int height = 0;
+        int width;
+        int height;
         Scanner user = new Scanner(System.in);
         int choice;
         System.out.println("What do you want to do with your image?");
